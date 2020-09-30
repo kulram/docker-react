@@ -10,4 +10,4 @@ RUN npm run build
 FROM nginx:alpine
 EXPOSE 80
 
-COPY --from=builder /var/app/build /usr/share/nginx/html
+COPY --from=0 /var/app/build /usr/share/nginx/html
